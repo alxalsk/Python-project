@@ -1,0 +1,10 @@
+def area(a,b,N):
+    S=0
+    p=(b-a)/N 
+    for i in range(N):
+        x = a+(i*p)
+        xbis = x + p 
+        S=S+(p*(xbis-x))
+    return (S) 
+
+print(area(0,1,10000))
