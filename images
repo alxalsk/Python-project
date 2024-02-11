@@ -1,0 +1,26 @@
+from random import *
+def sum(L):
+    c=0
+    for i in range (len(L)):
+       c=c+L[i]
+    return c
+
+def images():
+    L=10*[0]
+    n=0
+    while sum(L)!=10:
+        s=10*[0]
+        x=randint(0,9)
+        s[x]=1
+        if L[x]==0:
+            L[x]=1
+        #print(L)
+        n=n+1
+    return n
+
+def image(N):
+    n=0
+    for i in range(N):
+       n=n+images()
+    return n/N
+    
